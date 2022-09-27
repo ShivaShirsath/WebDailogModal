@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+      :modal {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        background-color: orange;
+        border: none;
+        border-radius: 2.5vmin;
+      }
+      ::backdrop {
+        background: black;
+        opacity: 0.5;
+      }
+      :modal > input {
+        position: sticky;
+        top: 0%;
+        left: 100%;
+        font-weight: 900;
+        border: none;
+        background: none;
+        color: red;
+        border-radius: 5vmin;
+      }
+      :modal > input:hover {
+        cursor: pointer;
+        background-color: red;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <dialog>
+      <input
+        type="button"
+        onclick="document.querySelector('dialog').close()"
+        value="╳"
+      />
+      <h1>Hello World !</h1>
+      This is Dailog Box
+    </dialog>
+
+    <button onclick="document.querySelector('dialog').showModal()">
+      Hello
+    </button>
+  </body>
+</html>
